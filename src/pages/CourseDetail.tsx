@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, Star, Play, Download, BookOpen } from 'lucide-react';
@@ -10,7 +11,6 @@ import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/contexts/AuthContext';
 import EnrollButton from '@/components/EnrollButton';
 import CourseSections from '@/components/CourseSections';
-import Footer from '@/components/Footer';
 
 interface Program {
   id: string;
@@ -142,7 +142,6 @@ const CourseDetail = () => {
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-kiki-purple-600"></div>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -159,7 +158,6 @@ const CourseDetail = () => {
             </Button>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -333,8 +331,6 @@ const CourseDetail = () => {
           </TabsContent>
         </Tabs>
       </div>
-
-      <Footer />
     </div>
   );
 };
